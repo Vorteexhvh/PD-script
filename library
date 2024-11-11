@@ -124,11 +124,11 @@ task.spawn(function()
 		'anti.<font color="rgb(245, 66, 230)">Stalke</font> ',
 		'anti.<font color="rgb(245, 66, 230)">Stalk</font> ',
 		'anti.<font color="rgb(245, 66, 230)">Stal</font> ',
-		'anti.<font color="rgb(245, 66, 230)">Sta</font> ', 'Regresso.<font color="rgb(245, 66, 230)">Stalker</font> ',
-		'anti.<font color="rgb(245, 66, 230)">St</font>', 'Regresso.<font color="rgb(245, 66, 230)">Stalk</font> ',
-		'anti.<font color="rgb(245, 66, 230)">S</font> ', 'Regresso.<font color="rgb(245, 66, 230)">Sta</font> ',
-		'anti.<font color="rgb(245, 66, 230)"> </font> ', 'Regresso.<font color="rgb(245, 66, 230)">S</font> ',
-		'anti.<font color="rgb(245, 66, 230)"> </font> ', 'Regresso.', 'Regress', 'Regres', 'Regre', 'Reg', 'Re', 'R',
+		'anti.<font color="rgb(245, 66, 230)">Sta</font> ', 'Stalker.<font color="rgb(245, 66, 230)">Regresso</font> ',
+		'anti.<font color="rgb(245, 66, 230)">St</font>', 'Stalker.<font color="rgb(245, 66, 230)">Regre</font> ',
+		'anti.<font color="rgb(245, 66, 230)">S</font> ', 'Stalker.<font color="rgb(245, 66, 230)">Reg</font> ',
+		'anti.<font color="rgb(245, 66, 230)"> </font> ', 'Stalker.<font color="rgb(245, 66, 230)">R</font> ',
+		'anti.<font color="rgb(245, 66, 230)"> </font> ', 'Regreso', 'Regress', 'Regres', 'Regre', 'Reg', 'Re', 'R',
 		-- Bozos
 		'G', 'Ga', 'Gay',
 		'Ga', 'G',
@@ -138,7 +138,7 @@ task.spawn(function()
 		-- Credits
 		'M', 'Ma', 'Mad', 'Made', 'Made B', 'Made By', 'Made By:', 'Made By: V', 'Made By: Vo', 'Made By: Vor',
 		'Made By: Vort', 'Made By: Vorte', 'Made By: Vortee', 'Made By: Vorteex', 'Made by: Vortee',
-		'Made By: Vorte.',
+		'Made By: Vorte',
 		'Made By: Vort', 'Made By: Vor', 'Made By: Vor', 'Made By: Vo', 'Made By: V', 'Made By:', 'Made By', 'Made B', 'Made', 'Mad', 'Ma', 'M'
 	}
 	while wait(0.2) do
