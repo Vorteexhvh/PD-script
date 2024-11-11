@@ -224,8 +224,9 @@ local esp = {
 }
 
 --// Loadstrings
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vorteexhvh/PD-script/refs/heads/main/library", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vorteexhvh/PD-script/refs/heads/main/library1", true))()
 --  local esp = loadstring(game:HttpGet("https://raw.githubusercontent.com/BIvck/Skibidi/refs/heads/main/esp.lua", true))()
+--  loadstring(game:HttpGet("https://raw.githubusercontent.com/Vorteexhvh/PD-script/refs/heads/main/script", true))()
 
 --// Tabs
 local tabs = {
