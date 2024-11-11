@@ -129,12 +129,7 @@ task.spawn(function()
 		'<font color="rgb(245, 66, 230)">S</font> ', 'Stalker.<font color="rgb(245, 66, 230)">Reg</font> ',
 		'<font color="rgb(245, 66, 230)"> </font> ', 'Stalker.<font color="rgb(245, 66, 230)">R</font> ',
 		'<font color="rgb(245, 66, 230)"> </font> ', 'Regreso', 'Regress', 'Regres', 'Regre', 'Reg', 'Re', 'R',
-		-- Bozos
-		'G', 'Ga', 'Gay',
-		'Ga', 'G',
-		-- Ak 47
-		'A', 'Ak', 'Ak-', 'Ak-4', 'Ak-47',
-		'Ak-4', 'Ak-', 'Ak', 'A',
+		
 		-- Credits
 		'M', 'Ma', 'Mad', 'Made', 'Made B', 'Made By', 'Made By:', 'Made By: V', 'Made By: Vo', 'Made By: Vor',
 		'Made By: Vort', 'Made By: Vorte', 'Made By: Vortee', 'Made By: Vorteex', 'Made by: Vortee',
