@@ -797,7 +797,7 @@ do
             if Value and replicatestorage:FindFirstChild("AmmoTypes") then
                 for i, v in ipairs(replicatestorage.AmmoTypes:GetChildren()) do
                     if v then
-                        v:SetAttribute("MuzzleVelocity", 2400)
+                        v:SetAttribute("MuzzleVelocity", 99999)
                     end
                 end
             elseif not Value and replicatestorage:FindFirstChild("AmmoTypes") then
@@ -1592,6 +1592,25 @@ do
     })
 end
 
+local invchecktab = tabs.visuals:createGroup("right", "Inventory checker")
+do
+    invchecktab:addToggle({ 
+        text = "Inventory checker", 
+        default = false, 
+        flag = "Inv_Check_bind", 
+        callback = function(Value)       
+        end
+    }):addKeybind({
+        text = "Inventory checker", 
+        type = "hold",
+        key = Enum.KeyCode.LeftAlt,
+        flag = "inventoryCheckerKeyFlag",
+        callback = function(Value)
+        end
+    })
+end
+
+
 --// Miscellanous
 local misctabgroup = tabs.misc:createGroup('left', 'World')
 local misctabgroup1 = tabs.misc:createGroup('center', 'Local Player')
@@ -2237,7 +2256,7 @@ do
     }):addKeybind({
         text = "menu bind",
         type = "toggle",
-        key = Enum.KeyCode.End,
+        key = Enum.KeyCode.RightShift,
         flag = "menubindkeybind_toggle",
         callback = function(Value)
             library.keybind = Value
@@ -2261,11 +2280,10 @@ do
         end
     })
     uisettings:addDivider()
-    uisettings:addLabel({ text = "Credits: @lksiwjas." })
-    uisettings:addLabel({ text = "Everything Created by @lksiwjas." })
-    uisettings:addLabel({ text = "Supports Solara WOWZERS" })
-    uisettings:addLabel({ text = "Best Solara script so far #2" })
-    uisettings:addLabel({ text = "but swimhub is #1 has a good instant hit :)" })
+    uisettings:addLabel({ text = "Credits: Vorteexhvh." })
+    uisettings:addLabel({ text = "Discord: sqrtx_x" })
+    uisettings:addLabel({ text = "Supports Solara" })
+    uisettings:addLabel({ text = "Best Solara script " })
 end
 
 --
@@ -2328,8 +2346,7 @@ do
     gameTab:addButton({
         text = "copy join code",
         callback = function(Value)
-            setclipboard(("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s')"):format(game.PlaceId,
-                game.JobId))
+            setclipboard(("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s')"):format(game.PlaceId, game.JobId))
             library:Notify("Stalker.lua - succesfully copied join code!", 5)
         end
     })
@@ -2350,12 +2367,8 @@ task.spawn(function()
         while not (character and character:FindFirstChild("HumanoidRootPart")) do wait(0.1) end
         local player = game.Players.LocalPlayer
         local playerCount = #game.Players:GetPlayers()
-        local formattedMousePos = string.format("Mouse Position: X: %.2f, Y: %.2f",
-            game:GetService("UserInputService"):GetMouseLocation().X,
-            game:GetService("UserInputService"):GetMouseLocation().Y)
-        local formattedPosition = string.format("Player Position: X: %.2f, Y: %.2f, Z: %.2f",
-            character.HumanoidRootPart.Position.X, character.HumanoidRootPart.Position.Y,
-            character.HumanoidRootPart.Position.Z)
+        local formattedMousePos = string.format("Mouse Position: X: %.2f, Y: %.2f", game:GetService("UserInputService"):GetMouseLocation().X, game:GetService("UserInputService"):GetMouseLocation().Y)
+        local formattedPosition = string.format("Player Position: X: %.2f, Y: %.2f, Z: %.2f", character.HumanoidRootPart.Position.X, character.HumanoidRootPart.Position.Y, character.HumanoidRootPart.Position.Z)
         local fps = tostring(math.floor(1 / game:GetService("RunService").RenderStepped:Wait()))
         local memoryUsage = string.format("Memory Usage: %.2f MB", collectgarbage("count") / 1024)
         debug_watermark.Text = "FPS: " ..
