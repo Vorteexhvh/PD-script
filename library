@@ -32,7 +32,7 @@ local tabholder = menu.bg.bg.bg.bg.bg.bg.main.group
 local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons
 
 local library = {
-	Title = 'Stalker.font color="rgb(245, 66, 230)">lua</font> | <font color="rgb(245, 66, 230)">Pre-Build</font>',
+	Title = 'Stalker.font color="rgb(245, 66, 230)">Regresso</font> | <font color="rgb(245, 66, 230)">Pre-Build</font>',
 	AnimatedText = false,
 	keybind = Enum.KeyCode.End,
 	Colors = {
@@ -94,10 +94,10 @@ task.spawn(function()
 	local textList = {
 		-- Original
 		'<font color="rgb(245, 66, 230)">s</font>',
-		'<font color="rgb(245, 66, 230)">S</font> ', '<font color="rgb(245, 66, 230)">.</font> ',
-		'<font color="rgb(245, 66, 230)">St</font> ', '<font color="rgb(245, 66, 230)">.l</font> ',
-		'<font color="rgb(245, 66, 230)">Sta</font> ', '<font color="rgb(245, 66, 230)">.lu</font> ',
-		'<font color="rgb(245, 66, 230)">Stal</font> ', '<font color="rgb(245, 66, 230)">.lua</font> ',
+		'<font color="rgb(245, 66, 230)">S</font> ',
+		'<font color="rgb(245, 66, 230)">St</font> ',
+		'<font color="rgb(245, 66, 230)">Sta</font> ',
+		'<font color="rgb(245, 66, 230)">Stal</font> ',
 		'<font color="rgb(245, 66, 230)">Stalk</font> ',
 		'<font color="rgb(245, 66, 230)">Stalke</font> ',
 		'<font color="rgb(245, 66, 230)">Stalker</font> ',
@@ -124,12 +124,12 @@ task.spawn(function()
 		'<font color="rgb(245, 66, 230)">Stalke</font> ',
 		'<font color="rgb(245, 66, 230)">Stalk</font> ',
 		'<font color="rgb(245, 66, 230)">Stal</font> ',
-		'<font color="rgb(245, 66, 230)">Sta</font> ', 'Stalker.<font color="rgb(245, 66, 230)">Regresso</font> ',
-		'<font color="rgb(245, 66, 230)">St</font>', 'Stalker.<font color="rgb(245, 66, 230)">Regre</font> ',
-		'<font color="rgb(245, 66, 230)">S</font> ', 'Stalker.<font color="rgb(245, 66, 230)">Reg</font> ',
-		'<font color="rgb(245, 66, 230)"> </font> ', 'Stalker.<font color="rgb(245, 66, 230)">R</font> ',
-		'<font color="rgb(245, 66, 230)"> </font> ', 'Regreso', 'Regress', 'Regres', 'Regre', 'Reg', 'Re', 'R',
-		
+		'<font color="rgb(245, 66, 230)">Sta</font> ',
+		'<font color="rgb(245, 66, 230)">St</font>',
+		'<font color="rgb(245, 66, 230)">S</font> ',
+		'<font color="rgb(245, 66, 230)"> </font> ',
+		'<font color="rgb(245, 66, 230)"> </font> ',
+
 		-- Credits
 		'M', 'Ma', 'Mad', 'Made', 'Made B', 'Made By', 'Made By:', 'Made By: V', 'Made By: Vo', 'Made By: Vor',
 		'Made By: Vort', 'Made By: Vorte', 'Made By: Vortee', 'Made By: Vorteex', 'Made by: Vortee',
@@ -263,9 +263,16 @@ LPH_NO_VIRTUALIZE(function()
 
 	InputService.InputEnded:Connect(function(key)
 		if key.KeyCode == library.keybind then
-			menu.Enabled = not menu.Enabled; library.scrolling = false; library.colorpicking = false; Cursor.Visible = not
-			Cursor.Visible; InputService.MouseIconEnabled = not InputService.MouseIconEnabled; CursorOutline.Visible = not
-			CursorOutline.Visible; for i, v in next, library.toInvis do v.Visible = false end
+			menu.Enabled = not menu.Enabled; 
+			library.scrolling = false; 
+			library.colorpicking = false; 
+			Cursor.Visible = not Cursor.Visible; 
+			InputService.MouseIconEnabled = not InputService.MouseIconEnabled; 
+			CursorOutline.Visible = not
+			CursorOutline.Visible; 
+			for i, v in next, library.toInvis do 
+				v.Visible = false 
+			end
 		end
 	end)
 
